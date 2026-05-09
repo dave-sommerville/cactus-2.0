@@ -1,4 +1,6 @@
 import React, { useState, useRef } from 'react';
+import {currentShow} from '../DAL/ShowList';
+import PersonProfile from '../components/PersonProfile';
 
 const Program = () => {
   // Logic for toggling the Cast and Crew blocks
@@ -42,19 +44,18 @@ const Program = () => {
           <p>who left the world's stage too soon.</p>
         </div>
 
-        <h2>The Siren Song of Stephen Jay Gould</h2>
-        <h4>by Benjamin Bettenbender</h4>
+        <h2>{currentShow.title}</h2>
+        <h4>by {currentShow.author}</h4>
 
         <div className="poster">
-          <img src="./src/img/siren-song/poster.jpg" alt="Show Poster" />
+          <img src={currentShow.coverPhoto} alt={`Show Poster for ${currentShow.title}`} />
         </div>
 
         <div className="program-wrapper">
           <div className="f-col fifty-w center">
             <h5>Synopsis</h5>
             <p>
-              A man lands on a woman after trying to throw himself off a bridge in a botched suicide attempt...
-              {/* Shortened for brevity, keep your full text here */}
+              {currentShow.synopsis}
             </p>
           </div>
 
@@ -68,9 +69,13 @@ const Program = () => {
               <h4>Dates and Times</h4>
               <div className="dates-wrapper flex">
                 <ul>
-                  <li>Friday, February 6, 2026 7:30 PM</li>
-                  <li>Saturday, February 7, 2026 2:00 PM</li>
-                  <li>Saturday, February 7, 2026 7:00 PM</li>
+                  {currentShow.dateTimes && currentShow.dateTimes.length > 0 ? (
+                    currentShow.dateTimes.map((time, index) => (
+                      <li key={index}>{time}</li>
+                    ))
+                  ) : (
+                      <li>Times available soon</li>
+                    )}
                 </ul>
               </div>
             </div>
@@ -78,13 +83,27 @@ const Program = () => {
         </div>
 
         <div className="bio-wrapper f-col">
-          <a href="https://eventbrite.ca/..." target="_blank" rel="noreferrer" className="btn coming-soon">
+          {currentShow.ticketLink && currentShow.ticketLink !== '' &&
+          <a href={currentShow.ticketLink} target="_blank" rel="noreferrer" className="btn coming-soon">
             Purchase Tickets
           </a>  
-          <a href="/photo-gallery.html" className="btn coming-soon">
+          }
+          {currentShow.mediaKitLink && currentShow.mediaKitLink !== '' &&
+          <a href={currentShow.mediaKitLink} target="_blank" rel="noreferrer" className="btn coming-soon">
+            Media Kit
+          </a>  
+          }
+          {currentShow.reviewsLink && currentShow.reviewsLink !== '' &&
+          <a href={currentShow.reviewsLink} target="_blank" rel="noreferrer" className="btn coming-soon">
+            Reviews
+          </a>  
+          }
+          {currentShow.galleryLink && currentShow.galleryLink !== '' &&
+          <a href={currentShow.galleryLink} target="_blank" rel="noreferrer" className="btn coming-soon">
             Photo Gallery
-          </a> 
-
+          </a>  
+          }
+        </div>
           <figure className="flex">
             <img 
               className="cast-photo" 
@@ -93,60 +112,33 @@ const Program = () => {
             />
           </figure>
 
-          <div className="button-wrapper siren">
-            <button 
-              className={`cast-btn ${activeSection === 'cast' ? 'active' : ''}`} 
-              onClick={() => toggleSection('cast')}
-            >
-              Cast
-            </button>
-            <button 
-              className={`crew-btn ${activeSection === 'crew' ? 'active' : ''}`} 
-              onClick={() => toggleSection('crew')}
-            >
-              Crew
-            </button>
-          </div>
+        <div className="button-wrapper siren">
+          <button 
+            className={`cast-btn ${activeSection === 'cast' ? 'active' : ''}`} 
+            onClick={() => toggleSection('cast')}
+          >
+            Cast
+          </button>
+          <button 
+            className={`crew-btn ${activeSection === 'crew' ? 'active' : ''}`} 
+            onClick={() => toggleSection('crew')}
+          >
+            Crew
+          </button>
+        </div>
 
-          {/* Cast Section */}
-          <div ref={castRef} className={`cast ${activeSection === 'cast' ? '' : 'collapse'}`}>
-            <figure className="eve-btn" onClick={() => toggleBio('eve')}>
-              <img src="./src/img/siren-song/eve-ross.jpg" alt="Eve Ross Moore" />
-              <figcaption>Eve Ross Moore</figcaption>
-            </figure>
-            <article className={`eve ${expandedBio['eve'] ? '' : 'collapse'}`}>
-              <p>Eve Ross Moore is thrilled to be a part of this year's Little Theatre Festival...</p>
-            </article>
+        {/* Unified Cast Section */}
+        <div ref={castRef} className={`cast ${activeSection === 'cast' ? '' : 'collapse'}`}>
+          {currentShow.castList.map((person, index) => (
+            <PersonProfile key={index} person={person} />
+          ))}
+        </div>
 
-            <figure className="dave-btn" onClick={() => toggleBio('dave')}>
-              <img src="./src/img/siren-song/dave-pruden.jpg" alt="Dave Pruden" />
-              <figcaption>Dave Pruden</figcaption>
-            </figure>
-            <article className={`dave ${expandedBio['dave'] ? '' : 'collapse'}`}>
-              <p>Dave Pruden, a graphic artist/pressman by day...</p>
-            </article>
-          </div>
-
-          {/* Crew Section */}
-          <div ref={crewRef} className={`crew ${activeSection === 'crew' ? '' : 'collapse'}`}>
-            <figure className="hope-btn" onClick={() => toggleBio('hope')}>
-              <img src="./src/img/siren-song/hope-figueroa.jpg" alt="Hope Figueroa" />
-              <figcaption>Hope Figueroa</figcaption>
-              <p>Director</p>
-            </figure>
-            <article className={`hope ${expandedBio['hope'] ? '' : 'collapse'}`}>
-              <p>Hope Figueroa (she/her) is an actor, improviser, and Arts Education advocate...</p>
-            </article>
-
-            <figure className="steph-btn" onClick={() => toggleBio('steph')}>
-              <img src="./src/img/siren-song/steph-blanchette.jpg" alt="Steph Blanchette" />
-              <figcaption>Steph Blanchette</figcaption>
-              <p>Artistic Director / Stage Manager</p>
-            </figure>
-            <article className={`steph ${expandedBio['steph'] ? '' : 'collapse'}`}>
-              <p>Steph Blanchette is the founder of Cactus Theatre Co...</p>
-            </article>
-          </div>
+        {/* Unified Crew Section */}
+        <div ref={crewRef} className={`crew ${activeSection === 'crew' ? '' : 'collapse'}`}>
+          {currentShow.crewList.map((person, index) => (
+            <PersonProfile key={index} person={person} />
+          ))}
         </div>
       </section>
     </main>
