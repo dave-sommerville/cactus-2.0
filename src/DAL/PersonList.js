@@ -11,10 +11,11 @@ import hopeFigueroaLowercase from '../media/staff/hope-figueroa.jpg';
 import jordanPhilips from '../media/staff/Jordan Philips.jpg';
 import juliaPhilips from '../media/staff/Julia Philips.jpg';
 import madelynRoseX2 from '../media/staff/Madelyn Rose x2.jpg';
-import natalieFitkowsky from '../media/staff/Natalie Fitkowsky.jpg';
+import natalieFitkowsky from '../media/staff/Natalie Fitkowsy.jpg';
 import rickScherger from '../media/staff/Rick Scherger.jpg';
 import shaneJordan from '../media/staff/Shane Jordan.jpg';
 import stephJBlanchette from '../media/staff/Steph J Blanchette.jpg';
+import danGilmour from '../media/memory-gallery/dan-photo.jpg';
 
 // Example 1: Full data
 export const director = new Person(
@@ -82,7 +83,7 @@ const DanGilmour = new Person(
   "Daniel Gilmour",
   "Playwright",
   "Daniel Gilmour was a passionate member of Winnipeg's theatre community. A proud member of the Black Hole Theatre Company at the U of M, after graduating he went on to act in numerous plays for multiple theatre companies around the city. A few highlights include The Beggar and the Wolf and Snow White and the Seven Dwarves with Merlyn Productions and The Taming of the Shrew and You Can't Take It With You with Winnipeg Mennonite Theatre. His final, posthumous role was in the radio play Letters: War Within with Parachuting Camel productions, which released almost a year after Dan's passing. Daniel had also done some screen acting, playing Mr. Morgan in ShawTV's Millworth. Part-time actor and full-time child minder (better known as an Early Childhood Educator), Daniel described himself as an avid board game player, a sports fan, and an exceptionally gifted napper. While these are certainly not the circumstances under which anyone would have liked to add “writer” to Dan's long list of credits, we are thrilled to bring the first of his written works to the Fringe.",
-  ""
+  danGilmour
 );
 
 const StephBlanchetteCactus = new Person(

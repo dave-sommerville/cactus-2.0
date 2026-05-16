@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../media/graphics/cactus-logo.JPG';
 
 const FloatingHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,7 +29,7 @@ const FloatingHeader = () => {
         <div className="flex center">
           {/* Internal Link to Home */}
           <Link className="small-logo-wrapper" to="/" onClick={closeMenu}>
-            <img src="./src/img/cactus-logo.JPG" alt="Cactus Theatre Co Logo" />
+            <img src={logo} alt="Cactus Theatre Co Logo" />
           </Link>
           <h3>Cactus Theatre Co.</h3>
         </div>
@@ -56,7 +57,6 @@ const FloatingHeader = () => {
             <div className="flex sp-even">
               {/* External Links: KEEP standard <a> tags */}
               <a href="https://facebook.com/..." target="_blank" rel="noreferrer" className="pointer hover">
-                <i className="fa-solid fa-square-rss"></i> {/* Corrected icon example */}
                 <i className="fa-brands fa-square-facebook"></i>
               </a>
               <a href="https://instagram.com/..." target="_blank" rel="noreferrer" className="pointer hover">

@@ -4,7 +4,8 @@ import PersonProfile from '../components/PersonProfile';
 
 const Program = () => {
   // Logic for toggling the Cast and Crew blocks
-  const [activeSection, setActiveSection] = useState(null); // 'cast', 'crew', or null
+  const [isCastOpen, setIsCastOpen] = useState(false);
+  const [isCrewOpen, setIsCrewOpen] = useState(false);
   
   // Logic for individual bio expansions
   const [expandedBio, setExpandedBio] = useState({});
@@ -12,15 +13,26 @@ const Program = () => {
   const castRef = useRef(null);
   const crewRef = useRef(null);
 
-  const toggleSection = (section) => {
-    if (activeSection === section) {
-      setActiveSection(null);
-    } else {
-      setActiveSection(section);
-      // Smooth scroll logic from your original script
-      const ref = section === 'cast' ? castRef : crewRef;
+  const openCast = () => {
+    const isOpening = !isCastOpen;
+    setIsCastOpen(isOpening);
+    setIsCrewOpen(false);
+
+    if (isOpening) {
       setTimeout(() => {
-        ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        castRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  };
+
+  const openCrew = () => {
+    const isOpening = !isCrewOpen;
+    setIsCrewOpen(isOpening);
+    setIsCastOpen(false);
+
+    if (isOpening) {
+      setTimeout(() => {
+        crewRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 100);
     }
   };
@@ -48,7 +60,9 @@ const Program = () => {
         <h4>by {currentShow.author}</h4>
 
         <div className="poster">
-          <img src={currentShow.coverPhoto} alt={`Show Poster for ${currentShow.title}`} />
+          {currentShow && currentShow.coverPhoto ? (
+            <img src={currentShow.coverPhoto} alt={`Show Poster for ${currentShow.title}`} />
+          ) : null}
         </div>
 
         <div className="program-wrapper">
@@ -114,28 +128,28 @@ const Program = () => {
 
         <div className="button-wrapper siren">
           <button 
-            className={`cast-btn ${activeSection === 'cast' ? 'active' : ''}`} 
-            onClick={() => toggleSection('cast')}
+            className={`cast-btn ${isCastOpen ? 'active' : ''}`} 
+            onClick={openCast}
           >
             Cast
           </button>
           <button 
-            className={`crew-btn ${activeSection === 'crew' ? 'active' : ''}`} 
-            onClick={() => toggleSection('crew')}
+            className={`crew-btn ${isCrewOpen ? 'active' : ''}`} 
+            onClick={openCrew}
           >
             Crew
           </button>
         </div>
 
         {/* Unified Cast Section */}
-        <div ref={castRef} className={`cast ${activeSection === 'cast' ? '' : 'collapse'}`}>
+        <div ref={castRef} className={`cast ${isCastOpen ? '' : 'collapse'}`}>
           {currentShow.castList.map((person, index) => (
             <PersonProfile key={index} person={person} />
           ))}
         </div>
 
         {/* Unified Crew Section */}
-        <div ref={crewRef} className={`crew ${activeSection === 'crew' ? '' : 'collapse'}`}>
+        <div ref={crewRef} className={`crew ${isCrewOpen ? '' : 'collapse'}`}>
           {currentShow.crewList.map((person, index) => (
             <PersonProfile key={index} person={person} />
           ))}
