@@ -1,3 +1,4 @@
+import danPhoto from '../media/memory-gallery/dan-photo.jpg';
 function About() {
   return(
     <>
@@ -13,7 +14,7 @@ function About() {
           In Dan's play Cactus (CTC's first staged production), one character tells us that, “In many First Nations cultures, cacti are symbols of endurance and love.” May our enduring love for Dan, for this community, and for the art of theatre be the focal point of every production.
         </p>
       <figure >
-        <img  class="dan-photo" src="./src/img/dan-photo.jpg"></img>
+        <img  class="dan-photo" src={danPhoto}></img>
       </figure>
       </section>
     </>

@@ -396,6 +396,7 @@ main {
 	font-size: 1.1rem;
 	font-style:italic;
 	padding: 0 50px;
+	line-height: 12px;
 }
 .bio-wrapper {
 	background-color: antiquewhite;

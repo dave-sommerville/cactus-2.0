@@ -1,9 +1,10 @@
 import React from 'react';
 import Program from '../components/Program';
+import { currentShow } from '../DAL/ShowList';
 import '../css/app.css';
 const SplashPage = () => {
   return (
-    <Program></Program>
+    <Program showModel={currentShow} />
   );
 };
 

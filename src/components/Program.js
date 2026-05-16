@@ -1,8 +1,9 @@
 import React, { useState, useRef } from 'react';
-import {currentShow} from '../DAL/ShowList';
 import PersonProfile from '../components/PersonProfile';
 
-const Program = () => {
+const Program = ({ showModel }) => {
+  const currentShow = showModel;
+
   // Logic for toggling the Cast and Crew blocks
   const [isCastOpen, setIsCastOpen] = useState(false);
   const [isCrewOpen, setIsCrewOpen] = useState(false);
@@ -12,6 +13,8 @@ const Program = () => {
 
   const castRef = useRef(null);
   const crewRef = useRef(null);
+
+  if (!currentShow) return null;
 
   const openCast = () => {
     const isOpening = !isCastOpen;

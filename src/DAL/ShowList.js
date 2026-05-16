@@ -36,3 +36,4 @@ const Cactus = new Show(
 
 
 export const currentShow = Cactus;
+export const pastShows = [Cactus];

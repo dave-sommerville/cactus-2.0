@@ -15,7 +15,7 @@ import natalieFitkowsky from '../media/staff/Natalie Fitkowsy.jpg';
 import rickScherger from '../media/staff/Rick Scherger.jpg';
 import shaneJordan from '../media/staff/Shane Jordan.jpg';
 import stephJBlanchette from '../media/staff/Steph J Blanchette.jpg';
-import danGilmour from '../media/memory-gallery/dan-photo.jpg';
+import danGilmour from '../media/staff/Daniel Gilmour.jpg';
 
 // Example 1: Full data
 export const director = new Person(
