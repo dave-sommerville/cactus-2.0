@@ -16,26 +16,62 @@ import rickScherger from '../media/staff/Rick Scherger.jpg';
 import shaneJordan from '../media/staff/Shane Jordan.jpg';
 import stephJBlanchette from '../media/staff/Steph J Blanchette.jpg';
 import danGilmour from '../media/staff/Daniel Gilmour.jpg';
+// uncreated 
+import allanTurner from '../media/staff/Allan Turner.jpg';
+import krissadieArmstrong from '../media/staff/Krissadie Armstrong.jpg';
+import audreyEnns from '../media/staff/Audrey D Enns.jpg';
+import timWebster from '../media/staff/Tim Webster.jpg';
+import katerinaDawson from '../media/staff/Katerina Dawson.jpg';
+import keaneBaker from '../media/staff/Keane Baker.jpg';
+import devonHemmett from '../media/staff/Devon J Hemmett.jpg';
 
-// Example 1: Full data
-export const director = new Person(
-  "Sarah Jenkins",
-  "Director",
-  "Sarah has over 15 years of experience in Broadway productions.",
-  "https://example.com/sarah-headshot.jpg"
+const AllanTurner = new Person(
+  "Allan Turner",
+  "Playwright",
+  "Allan Turner has had a passion for writing since his early childhood days of writing and performing plays and songs for his family. Allan comes to theatre from acting and writing in the film world. He has written numerous short and feature film scripts, has won awards for short films and currently has a feature film \“A Desperate Road\” streaming on Prime and Tubi. \“Unresolved\” is his first formal foray into the playwriting world and he couldn’t be more thrilled to work with Cactus Theatre Co and be given the opportunity to also perform with this incredible cast and crew.",
+  allanTurner
+);
+const KrissadieArmstrong = new Person(
+  "Krissadie ",
+  "Krissadie Armstrong (she/her) is an emerging artist based in Winnipeg, Manitoba. She has recently had the pleasure of taking part in workshops of new work, including the first workshop of A Manitoba Christmas Carol with Rainbow Stage and Love, Louis through RMTC’s Pimootayowin: A Festival of New Work. In the past, Krissadie has been involved with several educational theatre programs, including MYTP’s Musical Theatre Company and Summer Studio, StudioWorks Academy, and Junior Musical Theatre Company. She has also danced at Shelley Shearer School of Dance and Brady Academy of Irish Dance for the past 13 years. Krissadie is currently pursuing her Bachelor of Arts at the University of Manitoba, where she is a member of the musical theatre ensemble.",
+  "",
+  krissadieArmstrong
 );
 
-// Example 2: Partial data (Bio and Photo will become null via our setters)
-export const leadActor = new Person(
-  "Marcus Thorne",
-  "Lead Actor",
-  "", // Empty string becomes null
-  undefined // Undefined becomes null
+const AudreyEnns = new Person(
+  "Audrey D Enns",
+  "",
+  "Audrey may not be an AI in real life, but she’s already played one on stage. Making her theatre debut in 2024, she took on the lead role of Alexis/LXS9275 in “Companion: A Love Story” (Shoestring Players). Though new to theatre, Audrey is no stranger to acting and quickly immersed herself in the full production process. She joined the 2024 Winnipeg Fringe hit “The Social” (Curtain Call Collective) as an apprentice/assistant stage manager, eagerly learning the ins and outs behind the scenes. As the show’s unofficial understudy, she made her Fringe performance debut on opening night. At the 2025 Winnipeg Fringe Festival, Audrey stepped into the spotlight as the flirty and lustful Jenny in “Rob & Jenny’s First Date” (Dark Horse Theatre). This Fringe, Audrey is taking a dramatic turn and diving into deeper waters with the role of Melissa. Eager to stretch her range, she is thrilled  to create and play with the cast and crew of “Unresolved” (Cactus Theatre Co).",
+  audreyEnns
 );
 
+const TimWebster = new Person(
+  "Tim Webster",
+  "Driector",
+  "Tim's performance career set sail last century, taking him through, over, and sometimes under, seas of film, television, children's theatre, community theatre, dinner theatre, improvisational comedy, educational theatre, liturgical theatre, political satire, learning drama, and teaching drama.  Still buoyant, it continues to unfurl marvelous adventures . . . like this one!  Having previously worked with three fifths of the cast and seen the other two in action he's tremendously proud of this team and all their hard work.  Special thanks to Steph Blanchette for the opportunity to play, work, and create in Cactus Theatre, and to his partner Estee for her unwavering support.  During this festival, Tim is also performing improvisational comedy in This Is . . . with the Crosseyed Rascals.  Finally, Tim would like to take this opportunity to deny the completely unfounded rumour that he has had elective plastic surgery to crop his naturally-pointed ears ",
+  timWebster
+);
+const KaterinaDawon = new Person(
+  "Katerina Dawson",
+  "",
+  "Katerina Dawson who plays the role of Lydia, is pleased to join the cast in the production Unresolved. Katerina is from Winnipeg where she lives with her Family. She has trained with Darcy Fehr at The Acting Studio Winnipeg for over 15 years, and has attended numerous acting workshops with Tamara Gorski, Tammy Gillis, Paul Andrich, Aaron Merke, Jim Hieber and Carmen Kotyk. She has had lead roles in many Independent local films, The Day After, Fresh Meat, Veils, 15:15, The Lottery Ticket. She can be seen in the web series Wasted and a recurring role on Millworth. Katerina had her first Union role on Skymed. This is her 9 theatre role and she is excited to bring her acting abilities to the stage.",
+  katerinaDawson
+);
+const KeaneBaker = new Person(
+  "Keane Baker",
+  "Assitant Stage Director",
+  "Keane Baker has been a dedicated member of the crew for his high school’s musical for 3 years to help produce shows such as “Beauty and the Beast” and “Mamma Mia.” He is excited to work with Cactus Theatre co. to help bring “Unresolved” to the Fringe stage. Keane is known to get up early on a Saturday morning to bake cookies for his cast but not his family.",
+  keaneBaker
+);
+const DevonHemmett = new Person(
+  "Devon J Hemmett",
+  "",
+  "Working currently as a Music and Drama teacher in Pinawa, Devon always tries to find opportunities to continue practicing what he teaches and has now been in many theatrical productions across Manitoba. Off the stage Devon has also assisted various music and theatrical shows in their sound/light production. Most recently Devon has performed with groups such as the Pinawa Players, Interesting Theatre, Springfield Theatre Collective as Seymour Krelborn in Little Shop of Horrors, as Cinesias in RG Productions 2025 Fringe show Lysistrata, and is greatly looking forward to adding Cactus Theatre Co. for the 2026 Fringe Festival.",
+  devonHemmett
+);
 
 /*
-      CAST
+CAST
 */
 
 const JordanPhilips = new Person(
@@ -155,4 +191,21 @@ export const cactusCrewList = [
   BernardBorland, 
   DavePruden,
   RickSherger
+];
+
+export const unresolvedCastList = [
+  AllanTurner,
+  AudreyEnns,
+  KirssadieArmstrong,
+  KaterinaDawson,
+  DevonHemmett
+];
+
+export const unresolvedCrewList = [
+  AllanTurner,
+  StephBlanchette,
+  TimWebster,
+  KeaneBaker,
+  DavePruden,
+  DaveSommerville
 ];

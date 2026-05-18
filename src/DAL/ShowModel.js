@@ -1,31 +1,3 @@
-/* 
-ShowModel
-- Title
-- Author
-- Cover Photo/Alt Text
--? All cast photo/Alt Text
-- Synopsis
-- Location
--? Dates and Times
-- 
-
-ShowModel.ButtonWrapper(Name/Link)
--? Ticket Link
--? Media Kit
--? Reviews
--? Photo Gallery
-
-- Cast/Crew List
-
-ShowModel.ExpandingDiv(Cast/Crew, PersonModel)
-- Photo
-- Name
-- Bio
-
-Photo Gallery(Show)
-- API feed
-
-*/
 class Show {
   // Private fields
   #title = '';

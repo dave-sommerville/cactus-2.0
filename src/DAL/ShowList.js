@@ -35,5 +35,23 @@ const Cactus = new Show(
 );
 
 
+const Unresolved = new Show (
+  "Unresolved",
+  "Allan Turner",
+  null,
+  null,
+  "No parent should outlive their child, but . . . what if you do? How do you cope? How do you grieve? How do you go on living? What if you can’t? What if someone’s to blame? What if that someone is . . . you? Jack and Melissa have lost their daughter, Jadyn, and their unspoken grief festers between them in a vicious cycle of shame and guilt, unassuaged by well-intentioned relatives and clergy. Don’t miss this haunting, bold new piece from local playwright Allan Turner.",
+  "Coming Soon",
+  "Coming Soon",
+  "",
+  "",
+  "",
+  "",
+  null,
+  null
+);
+
+
+
 export const currentShow = Cactus;
 export const pastShows = [Cactus];
