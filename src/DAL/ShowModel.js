@@ -15,7 +15,6 @@ class Show {
   #crewList = [];
 
   constructor(title, author, coverPhoto, staffPhoto, synopsis, location, dateTimes, ticketLink, mediaLink, reviewsLink, galleryLink, castList, crewList) {
-    // Assigning via 'this.field' triggers the setters below
     this.title = title;
     this.author = author;
     this.coverPhoto = coverPhoto;

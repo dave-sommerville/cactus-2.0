@@ -16,7 +16,7 @@ import rickScherger from '../media/staff/Rick Scherger.jpg';
 import shaneJordan from '../media/staff/Shane Jordan.jpg';
 import stephJBlanchette from '../media/staff/Steph J Blanchette.jpg';
 import danGilmour from '../media/staff/Daniel Gilmour.jpg';
-// uncreated 
+
 import allanTurner from '../media/staff/Allan Turner.jpg';
 import krissadieArmstrong from '../media/staff/Krissadie Armstrong.jpg';
 import audreyEnns from '../media/staff/Audrey D Enns.jpg';
@@ -24,6 +24,13 @@ import timWebster from '../media/staff/Tim Webster.jpg';
 import katerinaDawson from '../media/staff/Katerina Dawson.jpg';
 import keaneBaker from '../media/staff/Keane Baker.jpg';
 import devonHemmett from '../media/staff/Devon J Hemmett.jpg';
+
+const EveRoss = [
+  "Eve Ross Moore",
+  "",
+  "Eve Ross Moore is thrilled to be a part of this year's Little Theatre Festival, and to be making her debut with Cactus Theatre Co. A local performer and playwright, Eve is a recent graduate of the University of Winnipeg's Theatre Program, and has also trained with the Village Conservatory for Musical Theatre. Recent credits include After August (Thinking & Feeling Theatre), Two Gentlemen of Verona (Indifferently Reformed), Mr and Mrs Nobody (Looking Glass Theatre), and From Up Here (University of Winnipeg). ",
+  eveRoss
+];
 
 const AllanTurner = new Person(
   "Allan Turner",
@@ -51,7 +58,7 @@ const TimWebster = new Person(
   "Tim's performance career set sail last century, taking him through, over, and sometimes under, seas of film, television, children's theatre, community theatre, dinner theatre, improvisational comedy, educational theatre, liturgical theatre, political satire, learning drama, and teaching drama.  Still buoyant, it continues to unfurl marvelous adventures . . . like this one!  Having previously worked with three fifths of the cast and seen the other two in action he's tremendously proud of this team and all their hard work.  Special thanks to Steph Blanchette for the opportunity to play, work, and create in Cactus Theatre, and to his partner Estee for her unwavering support.  During this festival, Tim is also performing improvisational comedy in This Is . . . with the Crosseyed Rascals.  Finally, Tim would like to take this opportunity to deny the completely unfounded rumour that he has had elective plastic surgery to crop his naturally-pointed ears ",
   timWebster
 );
-const KaterinaDawon = new Person(
+const KaterinaDawson = new Person(
   "Katerina Dawson",
   "",
   "Katerina Dawson who plays the role of Lydia, is pleased to join the cast in the production Unresolved. Katerina is from Winnipeg where she lives with her Family. She has trained with Darcy Fehr at The Acting Studio Winnipeg for over 15 years, and has attended numerous acting workshops with Tamara Gorski, Tammy Gillis, Paul Andrich, Aaron Merke, Jim Hieber and Carmen Kotyk. She has had lead roles in many Independent local films, The Day After, Fresh Meat, Veils, 15:15, The Lottery Ticket. She can be seen in the web series Wasted and a recurring role on Millworth. Katerina had her first Union role on Skymed. This is her 9 theatre role and she is excited to bring her acting abilities to the stage.",
@@ -196,16 +203,26 @@ export const cactusCrewList = [
 export const unresolvedCastList = [
   AllanTurner,
   AudreyEnns,
-  KirssadieArmstrong,
+  KrissadieArmstrong,
   KaterinaDawson,
   DevonHemmett
 ];
 
 export const unresolvedCrewList = [
   AllanTurner,
-  StephBlanchette,
+  StephBlanchetteCactus,
   TimWebster,
   KeaneBaker,
   DavePruden,
+  DaveSommerville
+];
+
+export const sssjgCastList = [
+  EveRoss,
+  DavePruden
+];
+export const sssjgCrewList = [
+  HopeFigueroaCactus,
+  StephBlanchetteCactus,
   DaveSommerville
 ];
