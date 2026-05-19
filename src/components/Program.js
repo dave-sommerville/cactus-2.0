@@ -50,15 +50,6 @@ const Program = ({ showModel }) => {
   return (
     <main className="container">
       <section className="program">
-        <div className="epithet">
-          <p>Bringing people together</p>
-          <p>to create and play.</p>
-          <p>Cactus Theatre Co was created</p> 
-          <p>in memory of our friend</p>
-          <p>Daniel Gilmour,</p>
-          <p>who left the world's stage too soon.</p>
-        </div>
-
         <h2>{currentShow.title}</h2>
         <h4>by {currentShow.author}</h4>
 
@@ -124,7 +115,7 @@ const Program = ({ showModel }) => {
           <figure className="flex">
             <img 
               className="cast-photo" 
-              src="./src/img/siren-song/Cast & Crew.PNG" 
+              src={currentShow.allStaffPhoto}
               alt="Cast and Crew" 
             />
           </figure>

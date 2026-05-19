@@ -34,7 +34,7 @@ const Cactus = new Show(
 );
 
 
-const Unresolved = new Show (
+export const Unresolved = new Show (
   "Unresolved",
   "Allan Turner",
   unresolvedPoster,
@@ -50,11 +50,11 @@ const Unresolved = new Show (
   unresolvedCrewList
 );
 
-const sssjgIrish = [
+export const sssjgIrish = new Show(
   "The Siren Song of Stephen Jay Gould",
   "Benjamin Bettenbender",
-  null,
-  null,
+  sssjgPoster,
+  sssjgAllStaff,
   "A man lands on a woman after trying to throw himself off a bridge in a botched suicide attempt. On the quiet riverbank, as he attends to her minor injury, he learns that she too was planning to end her life over a broken heart. An argument ensues over the relative seriousness of their respective losses, the nature of existence, and the harmful effects of the essays of biologist Stephen Jay Gould. Will this unexpected collision lead each of them back to the dark place where they started, or will they start anew? ",
   "Irish Association of Manitoba - 654 Erin Street",
   [
@@ -69,13 +69,13 @@ const sssjgIrish = [
   sssjgCastList,
   sssjgCrewList
 
-];
+);
 
-const sssjgGimli = [
+export const sssjgGimli = new Show(
   "The Siren Song of Stephen Jay Gould",
   "Benjamin Bettenbender",
-  null,
-  null,
+  sssjgPosterGimli,
+  sssjgAllStaff,
   "A man lands on a woman after trying to throw himself off a bridge in a botched suicide attempt. On the quiet riverbank, as he attends to her minor injury, he learns that she too was planning to end her life over a broken heart. An argument ensues over the relative seriousness of their respective losses, the nature of existence, and the harmful effects of the essays of biologist Stephen Jay Gould. Will this unexpected collision lead each of them back to the dark place where they started, or will they start anew?",
   "",
   "",
@@ -83,7 +83,7 @@ const sssjgGimli = [
   "",
   sssjgCastList,
   sssjgCrewList
-];
+);
 
 export const currentShow = Unresolved;
 export const pastShows = [Cactus, sssjgIrish];

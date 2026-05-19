@@ -265,11 +265,18 @@ article {
 	max-width: min(100% - 40px, 1200px);
 	border-radius: 16px;
 }
-.poster {
-	height: fit-content;
+.past-show-links {
 	width: 100%;
 	display: flex;
+	/* flex-direction: column; */
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+.poster {
+	display: flex;
 	overflow: hidden;
+	border-radius: var(--app-border-rad);
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 25px;

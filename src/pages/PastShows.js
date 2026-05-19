@@ -3,7 +3,7 @@ import Program from '../components/Program';
 import { pastShows } from '../DAL/ShowList';
 
 const PastShows = () => {
-  const [selectedShow, setSelectedShow] = useState(pastShows[0] || null);
+  const [selectedShow, setSelectedShow] = useState(null);
 
   return (
     <section className="past-shows">
@@ -21,10 +21,8 @@ const PastShows = () => {
         ))}
       </div>
 
-      {selectedShow ? (
+      {selectedShow && (
         <Program showModel={selectedShow} />
-      ) : (
-        <p>No past shows are available.</p>
       )}
     </section>
   );
