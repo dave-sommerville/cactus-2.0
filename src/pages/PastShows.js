@@ -13,7 +13,7 @@ const PastShows = () => {
           <button
             key={show.title}
             type="button"
-            className="btn"
+            className={`btn ${selectedShow === show ? 'active' : ''}`}
             onClick={() => setSelectedShow(show)}
           >
             {show.title}
@@ -21,8 +21,10 @@ const PastShows = () => {
         ))}
       </div>
 
-      {selectedShow && (
-        <Program showModel={selectedShow} />
+      {selectedShow ? (
+        <Program showModel={selectedShow} displayMode="active" />
+      ) : (
+        <p className="past-show-placeholder">Select a past show above to see full details.</p>
       )}
     </section>
   );

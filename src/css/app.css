@@ -160,6 +160,11 @@ button, .btn {
 button:hover, .btn:hover{
 	filter: brightness(0.7);
 }
+.btn.active {
+	background-color: #f5c16f;
+	color: #2f2a23;
+	box-shadow: 0 8px 18px rgba(0,0,0,0.14);
+}
 .btn.secondary {
 	background-color: transparent;
 	border: solid 2px var(--clr-background);
@@ -284,11 +289,6 @@ article {
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 25px;
-	img {
-		width: 50svw;
-		aspect-ratio: 1/1;
-		border-radius: var(--app-bdr-rad);
-	}
 }
 .memory-card {
 	width: min(100% - 30px, 400px);
@@ -431,14 +431,12 @@ article {
 }
 
 .program .poster {
-	margin: 18px 0 10px;
+	/* margin: 18px 0 10px; */
 	transition: all 0.4s ease;
 }
 
 .program .poster img {
-	width: 100%;
-	height: auto;
-	max-height: 420px;
+	width: 300px;
 	object-fit: cover;
 	border-radius: 18px;
 }
@@ -511,7 +509,7 @@ article {
 	justify-content: center;
 }
 .cast-photo {
-	width: 400px;
+	width: 300px;
 	border-radius: var(--app-bdr-rad);
 }
 .cast, .crew {
@@ -646,6 +644,9 @@ article {
 	font-size: 2rem;
 
 }
+.cast .job-title {
+	display: none;
+}
 
 .memories, .photo-wrapper {
 	background-color: #30378b;
@@ -751,6 +752,9 @@ article {
 			width: 450px;
 			height: 253px;
 		}
+	}
+	.program h2 {
+		font-size: 22px;
 	}
 }
 
