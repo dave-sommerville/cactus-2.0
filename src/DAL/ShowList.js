@@ -6,7 +6,7 @@ import cactusAllStaff from '../media/graphics/cast.jpg';
 import sssjgPoster from '../media/graphics/poster.jpg';
 import sssjgAllStaff from '../media/graphics/cast-photo.jpg';
 import unresolvedPoster from '../media/graphics/Unresolved Graphic.jpg';
-import sssjgPosterGimli from '../media/graphics/New Graphic for SSSJG.jpg';
+import sssjgPosterGimli from '../media/graphics/New Graphic for SSSJG.JPG';
 import unresolvedAllStaff from '../media/graphics/Unresolved Cast and Crew.jpg';
 
 const Cactus = new Show(
