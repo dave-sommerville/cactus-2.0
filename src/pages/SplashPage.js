@@ -4,38 +4,47 @@ import { Unresolved, sssjgGimli } from '../DAL/ShowList';
 import '../css/app.css';
 
 const SplashPage = () => {
-  const[showOneActive, setShowOneActive] = useState();
-  const[showTwoActive, setShowTwoActive] = useState();
+  const [activeShowId, setActiveShowId] = useState(null);
 
-  const handleShowOneClick = () => {
-    setShowOneActive(!showOneActive);
-    if(showTwoActive) {
-      setShowTwoActive(false);
-    }
-  }
-  const handleShowTwoClick = () => {
-    setShowTwoActive(!showTwoActive);
-    if(showOneActive) {
-      setShowOneActive(false);
-    }
-  }
+  const handleShowClick = (showId) => {
+    setActiveShowId((prev) => (prev === showId ? null : showId));
+  };
+
   return (
-    <>
-    <div className="epithet">
-      <p>Bringing people together</p>
-      <p>to create and play.</p>
-      <p>Cactus Theatre Co was created</p> 
-      <p>in memory of our friend</p>
-      <p>Daniel Gilmour,</p>
-      <p>who left the world's stage too soon.</p>
+    <div className="splash-container container">
+      <div className="epithet">
+        <p>Bringing people together</p>
+        <p>to create and play.</p>
+        <p>Cactus Theatre Co was created</p>
+        <p>in memory of our friend</p>
+        <p>Daniel Gilmour,</p>
+        <p>who left the world's stage too soon.</p>
+      </div>
+      <div className={`show-panels ${activeShowId ? 'show-active' : ''}`}>
+        <section
+          role="button"
+          tabIndex={0}
+          className={`show-section ${activeShowId === 'one' ? 'active' : activeShowId ? 'inactive' : 'default'}`}
+          onClick={() => handleShowClick('one')}
+        >
+          <Program
+            showModel={Unresolved}
+            displayMode={activeShowId === 'one' ? 'active' : activeShowId ? 'inactive' : 'default'}
+          />
+        </section>
+        <section
+          role="button"
+          tabIndex={0}
+          className={`show-section ${activeShowId === 'two' ? 'active' : activeShowId ? 'inactive' : 'default'}`}
+          onClick={() => handleShowClick('two')}
+        >
+          <Program
+            showModel={sssjgGimli}
+            displayMode={activeShowId === 'two' ? 'active' : activeShowId ? 'inactive' : 'default'}
+          />
+        </section>
+      </div>
     </div>
-    <section>
-      <Program showModel={Unresolved} />
-    </section>
-      <section>
-      <Program showModel={sssjgGimli} />
-    </section>
-    </>
   );
 };
 

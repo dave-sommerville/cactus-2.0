@@ -10,7 +10,10 @@ const PersonProfile = ({ person }) => {
     <div className="person-profile">
       <figure 
         className="profile-trigger" 
-        onClick={() => setIsExpanded(!isExpanded)}
+        onClick={(event) => {
+          event.stopPropagation();
+          setIsExpanded(!isExpanded);
+        }}
         style={{ cursor: 'pointer' }}
       >
         {/* Only render image if headShot is not null */}

@@ -77,6 +77,13 @@ export const sssjgGimli = new Show(
   sssjgPosterGimli,
   sssjgAllStaff,
   "A man lands on a woman after trying to throw himself off a bridge in a botched suicide attempt. On the quiet riverbank, as he attends to her minor injury, he learns that she too was planning to end her life over a broken heart. An argument ensues over the relative seriousness of their respective losses, the nature of existence, and the harmful effects of the essays of biologist Stephen Jay Gould. Will this unexpected collision lead each of them back to the dark place where they started, or will they start anew?",
+  "Aspire Theatre Gimli MB",
+  [
+    "Friday June 26  - 7:30",
+    "Saturday June 27 - 2:00",
+    "Sunday June 27 - 2:00",
+    "Call 204-642-8079 to reserve your tickets or you can pay cash at the door or visit HP Tergesen's (82-1st Ave, Gimli) with cash 1 week prior to the performances."
+  ],
   "",
   "",
   "",
