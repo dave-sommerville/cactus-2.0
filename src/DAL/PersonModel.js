@@ -19,7 +19,13 @@ class Person {
   }
 
   set title(val) {
-    this.#title = val || null;
+    if (Array.isArray(val)) {
+      this.#title = val.length ? val : null;
+    } else if (typeof val === 'string' && val.trim() !== '') {
+      this.#title = [val];
+    } else {
+      this.#title = null;
+    }
   }
 
   set bio(val) {

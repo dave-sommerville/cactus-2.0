@@ -70,9 +70,16 @@ const Program = ({ showModel}) => {
               <div className="f-col fifty-w center">
                 <div className="f-col center">
                   <div className="location">
-                    <span>Irish Association of Manitoba</span>
-                    <span className="dash"> - </span>
-                    <span>654 Erin Street</span>
+                    {currentShow.location && currentShow.location.length > 0 ? (
+                      currentShow.location.map((locationItem, index) => (
+                        <React.Fragment key={index}>
+                          <span>{locationItem}</span>
+                          {index < currentShow.location.length - 1 && <span className="dash"> - </span>}
+                        </React.Fragment>
+                      ))
+                    ) : (
+                      <span>Location details coming soon</span>
+                    )}
                   </div>
                   <h4>Dates and Times</h4>
                   <div className="dates-wrapper flex">

@@ -25,12 +25,12 @@ import katerinaDawson from '../media/staff/Katerina Dawson.jpg';
 import keaneBaker from '../media/staff/Keane Baker.jpg';
 import devonHemmett from '../media/staff/Devon J Hemmett.jpg';
 
-const EveRoss = [
+const EveRoss = new Person(
   "Eve Ross Moore",
   "",
   "Eve Ross Moore is thrilled to be a part of this year's Little Theatre Festival, and to be making her debut with Cactus Theatre Co. A local performer and playwright, Eve is a recent graduate of the University of Winnipeg's Theatre Program, and has also trained with the Village Conservatory for Musical Theatre. Recent credits include After August (Thinking & Feeling Theatre), Two Gentlemen of Verona (Indifferently Reformed), Mr and Mrs Nobody (Looking Glass Theatre), and From Up Here (University of Winnipeg). ",
   eveRoss
-];
+);
 
 const AllanTurner = new Person(
   "Allan Turner",
@@ -39,9 +39,9 @@ const AllanTurner = new Person(
   allanTurner
 );
 const KrissadieArmstrong = new Person(
-  "Krissadie ",
-  "Krissadie Armstrong (she/her) is an emerging artist based in Winnipeg, Manitoba. She has recently had the pleasure of taking part in workshops of new work, including the first workshop of A Manitoba Christmas Carol with Rainbow Stage and Love, Louis through RMTC’s Pimootayowin: A Festival of New Work. In the past, Krissadie has been involved with several educational theatre programs, including MYTP’s Musical Theatre Company and Summer Studio, StudioWorks Academy, and Junior Musical Theatre Company. She has also danced at Shelley Shearer School of Dance and Brady Academy of Irish Dance for the past 13 years. Krissadie is currently pursuing her Bachelor of Arts at the University of Manitoba, where she is a member of the musical theatre ensemble.",
+  "Krissadie Armstrong",
   "",
+  "Krissadie Armstrong (she/her) is an emerging artist based in Winnipeg, Manitoba. She has recently had the pleasure of taking part in workshops of new work, including the first workshop of A Manitoba Christmas Carol with Rainbow Stage and Love, Louis through RMTC’s Pimootayowin: A Festival of New Work. In the past, Krissadie has been involved with several educational theatre programs, including MYTP’s Musical Theatre Company and Summer Studio, StudioWorks Academy, and Junior Musical Theatre Company. She has also danced at Shelley Shearer School of Dance and Brady Academy of Irish Dance for the past 13 years. Krissadie is currently pursuing her Bachelor of Arts at the University of Manitoba, where she is a member of the musical theatre ensemble.",
   krissadieArmstrong
 );
 
@@ -66,7 +66,7 @@ const KaterinaDawson = new Person(
 );
 const KeaneBaker = new Person(
   "Keane Baker",
-  "Assitant Stage Director",
+  "Assistant Stage Director",
   "Keane Baker has been a dedicated member of the crew for his high school’s musical for 3 years to help produce shows such as “Beauty and the Beast” and “Mamma Mia.” He is excited to work with Cactus Theatre co. to help bring “Unresolved” to the Fringe stage. Keane is known to get up early on a Saturday morning to bake cookies for his cast but not his family.",
   keaneBaker
 );
@@ -88,7 +88,7 @@ const JordanPhilips = new Person(
 );
 const HopeFigueroaCactus = new Person(
   "Hope Figueroa",
-  "",
+  "Director",
   "Hope Figueroa (she/her) is an actor, improviser, and Arts Education advocate based in Winnipeg, MB. She's thrilled to help bring her friend's magnum opus, Cactus, to life with Cactus Theatre Co. Hope and Dan met after a Merlyn Productions show at Carlos & Murphy's, bonding over stories, jokes, and nachos. Since then, they collaborated on several projects, including C*A*S*H* (BS Comedy Players), a Zoom reading of Last Christmas (as Clara Oswald and The Doctor), and other script readings. She remains grateful to Dan for introducing her to Doctor Who and Sherlock—despite her initial reluctance. Select acting credits include The Savannah Sipping Society, Motherhood Out Loud, and Not Medea (R-G Productions); The Tempest (Indifferently Reformed); The Laramie Project (Meraki Theatre); and A Marriage Proposal (Merlyn Productions). A seasoned improviser, Hope performs with The Crosseyed Rascals, has guested in the IF Festival, and jams regularly at Winn-City Improv events. Offstage, she is the incoming president of the Manitoba Drama Educators' Association and works with teens as a guidance counsellor. She looks forward to directing with Cactus Theatre Co. in 2026.",
   hopeFigueroa
 );
@@ -130,8 +130,8 @@ const DanGilmour = new Person(
 );
 
 const StephBlanchetteCactus = new Person(
-  "Steph Blanchette",
-  "Artistic Director, Stage Manager",
+  "Steph J Blanchette",
+  ["Artistic Director", "Stage Manager"],
   "Steph Blanchette is the founder of Cactus Theatre Co, created in memory of Daniel Gilmour and his play of the same name. Steph first worked with Dan on \"Italian American Reconciliation\" at Shanley Fest 2018. They also worked together with Merlyn Productions where Dan loved performing for children, especially his niece and biggest fan Madelyn. It is an honour to be producing Cactus and bringing his words to the stage. Steph co-produced \"Mulligan's Island\" (Winnipeg Fringe 2015), \"Once On This Island\" (Shoe In Productions 2017), and \"Audition Deficit Disorder\" (Winnipeg Fringe 2022). Other highlights are \"Weirder Thou Art\" (Winnipeg Fringe 2016, Toronto Fringe 2017), \"Your Brain On Anxiety\" (Winnipeg Fringe 2018), \"The Weight of Shame\" (An Seanchai Theatre Company 2023) and \"9 to 5 The Musical\" (RMTC Lawyers Play 2023). Steph's next big project is producing  \"The Little Theatre Festival\" with Siobhan Keely and Rob Kwade, bringing together community theatre in February 2026.",
   stephJBlanchette
 );
@@ -144,13 +144,13 @@ const AlisonKolisnyk = new Person(
 );
 const JuliaPhilips = new Person(
   "Julia Philips",
-  "Assitant Stage Manager, Costume Designer",
+  "Assistant Stage Manager, Costume Designer",
   "Julia Phillips is an incorrigible collector of crafts and hobbies, and is cursed with mindset of wondering \"How hard can it really be?\" when faced with a creative challenge. This landed in her first role as costume designer for The Tempest (Winnipeg Fringe 2023), and since then she has been keeping an eye out for more shows/excuses to make historical and fantastical costumes. This is her first time in the role of Assistant Stage Manager.",
   juliaPhilips
 );
 const HeatherForgie = new Person(
   "Heather Forgie",
-  "Set Designer, Props",
+  "Set and Props Designer",
   "Heather Forgie has been the artistic director of R-G Productions since 2014, and has designed sets and built props for all of their shows since then. She is also the property mistress for Merlyn Productions, where she met Dan Gilmour. Heather is a writer, actress, middle school teacher and mother of two amazing sons. She is honoured to be a part of this production in memory of a dear friend and fellow artistic Jack-of-all-trades.",
   heatherForgie
 );
@@ -163,7 +163,7 @@ const BernardBorland = new Person(
 
 const DavePruden = new Person(
   "Dave Pruden",
-  "Publicity Designer",
+  "Graphic and Publicity Designer",
   "Graphic artist by day. Dave worked in so many Fringe Festival productions, he's lost count. Acted. Stage managed. Tech. And did the graphics for every show he was involved in. While he only worked with Dan on one show years ago, he is grateful to be part of this production that will do his memory proud. Wishes for a world filled with peace, tolerance, and plenty of parking.",
   davePruden
 );
@@ -224,5 +224,6 @@ export const sssjgCastList = [
 export const sssjgCrewList = [
   HopeFigueroaCactus,
   StephBlanchetteCactus,
+  davePruden,
   DaveSommerville
 ];

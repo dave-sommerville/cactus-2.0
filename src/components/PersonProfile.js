@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 const PersonProfile = ({ person }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const titleLines = Array.isArray(person?.title) ? person.title.filter(Boolean) : person?.title ? [person.title] : [];
 
   // If there's no person data, don't render anything
   if (!person) return null;
@@ -24,7 +25,13 @@ const PersonProfile = ({ person }) => {
         <figcaption>{person.personName}</figcaption>
         
         {/* Only render title if it exists */}
-        {person.title && <p className="job-title">{person.title}</p>}
+        {titleLines.length > 0 && (
+          <div className="job-title">
+            {titleLines.map((line, index) => (
+              <p key={index}>{line}</p>
+            ))}
+          </div>
+        )}
       </figure>
 
       {/* Bio section - only renders if bio exists AND is toggled open */}

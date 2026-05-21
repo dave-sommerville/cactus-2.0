@@ -34,7 +34,15 @@ class Show {
   set title(val) { this.#title = val || null; }
   set author(val) { this.#author = val || null; }
   set synopsis(val) { this.#synopsis = val || null; }
-  set location(val) { this.#location = val || null; }
+  set location(val) {
+    if (Array.isArray(val)) {
+      this.#location = val.length ? val : null;
+    } else if (typeof val === 'string' && val.trim() !== '') {
+      this.#location = [val];
+    } else {
+      this.#location = null;
+    }
+  }
   set dateTimes(val) { this.#dateTimes = Array.isArray(val) ? val : []; }
   set ticketLink(val) { this.#ticketLink = val || null; }
   set mediaKitLink(val) { this.#mediaKitLink = val || null; }
