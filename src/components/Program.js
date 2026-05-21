@@ -1,11 +1,8 @@
 import React, { useState, useRef } from 'react';
 import PersonProfile from '../components/PersonProfile';
 
-const Program = ({ showModel, displayMode = 'default' }) => {
+const Program = ({ showModel}) => {
   const currentShow = showModel;
-  const isActive = displayMode === 'active';
-  const isInactive = displayMode === 'inactive';
-  const isCompact = displayMode === 'default';
 
   // Logic for toggling the Cast and Crew blocks
   const [isCastOpen, setIsCastOpen] = useState(false);
@@ -50,23 +47,18 @@ const Program = ({ showModel, displayMode = 'default' }) => {
     }));
   };
 
-  const programMode = isActive ? 'program active' : isInactive ? 'program inactive' : 'program compact';
-
   return (
     <main>
-      <section className={programMode}>
+      <section>
         <h2>{currentShow.title}</h2>
         <h4>by {currentShow.author}</h4>
 
-        {!isInactive && (
           <div className="poster">
             {currentShow && currentShow.coverPhoto ? (
               <img src={currentShow.coverPhoto} alt={`Show Poster for ${currentShow.title}`} />
             ) : null}
           </div>
-        )}
 
-        {isActive && (
           <>
             <div className="program-wrapper">
               <div className="f-col fifty-w center">
@@ -157,7 +149,6 @@ const Program = ({ showModel, displayMode = 'default' }) => {
               ))}
             </div>
           </>
-        )}
       </section>
     </main>
   );
