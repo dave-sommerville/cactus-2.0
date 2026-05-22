@@ -69,6 +69,7 @@ const Program = ({ showModel, id}) => {
               </div>
               <div className="f-col fifty-w center">
                 <div className="f-col center">
+                  <h4>Venue</h4>
                   <div className="location">
                     {currentShow.location && currentShow.location.length > 0 ? (
                       currentShow.location.map((locationItem, index) => (

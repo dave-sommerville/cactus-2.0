@@ -224,6 +224,6 @@ export const sssjgCastList = [
 export const sssjgCrewList = [
   HopeFigueroaCactus,
   StephBlanchetteCactus,
-  davePruden,
+  DavePruden,
   DaveSommerville
 ];
