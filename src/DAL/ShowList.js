@@ -82,6 +82,7 @@ export const sssjgGimli = new Show(
     "Friday June 26  - 7:30",
     "Saturday June 27 - 2:00",
     "Sunday June 27 - 2:00",
+    "-----",
     "Call 204-642-8079 to reserve your tickets or you can pay cash at the door or visit HP Tergesen's (82-1st Ave, Gimli) with cash 1 week prior to the performances."
   ],
   "",

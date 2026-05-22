@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import PersonProfile from '../components/PersonProfile';
 
-const Program = ({ showModel}) => {
+const Program = ({ showModel, id}) => {
   const currentShow = showModel;
 
   // Logic for toggling the Cast and Crew blocks
@@ -49,7 +49,7 @@ const Program = ({ showModel}) => {
 
   return (
     <main>
-      <section>
+      <section id={id}>
         <h2>{currentShow.title}</h2>
         <h4>by {currentShow.author}</h4>
 
@@ -82,7 +82,7 @@ const Program = ({ showModel}) => {
                     )}
                   </div>
                   <h4>Dates and Times</h4>
-                  <div className="dates-wrapper flex">
+                  <div className="dates-wrapper flex t-cen">
                     <ul className="f-col">
                       {currentShow.dateTimes && currentShow.dateTimes.length > 0 ? (
                         currentShow.dateTimes.map((time, index) => (
@@ -119,7 +119,7 @@ const Program = ({ showModel}) => {
               </a>  
               }
             </div>
-              <figure className="flex">
+              <figure className="flex cen">
                 <img 
                   className="cast-photo" 
                   src={currentShow.allStaffPhoto}

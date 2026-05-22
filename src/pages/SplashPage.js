@@ -6,6 +6,10 @@ import '../css/app.css';
 const SplashPage = () => {
   return (
     <div className="splash-container container">
+      {/* <section className="flex gap">
+        <a href="#unresolved" className="btn">Unresolved</a>
+        <a href="sssjGimli" className="btn">S. S. S. J. G.</a>
+      </section> */}
       <div className="epithet">
         <p>Bringing people together</p>
         <p>to create and play.</p>
@@ -14,16 +18,15 @@ const SplashPage = () => {
         <p>Daniel Gilmour,</p>
         <p>who left the world's stage too soon.</p>
       </div>
-        <section>
-          <Program
-            showModel={Unresolved}
-          />
-        </section>
-        <section>
-          <Program
-            showModel={sssjgGimli}
-          />
-        </section>
+      <h2>Winnipeg Fringe Festival 2026</h2>
+      <Program
+        showModel={Unresolved}
+        id="unresolved"
+      />
+      <Program
+        showModel={sssjgGimli}
+        id="sssjgGimli"
+      />
       </div>
   );
 };

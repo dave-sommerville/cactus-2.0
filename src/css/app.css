@@ -18,6 +18,7 @@ body {
 	font-family: "Poppins";
 	background-color: var(--clr-background);
 	overflow: visible;
+	scroll-behavior: smooth; 
 }
 
 /*----------------------------------------------------------->
@@ -51,6 +52,10 @@ body {
   display: flex;
 	flex-direction: column;
 }
+.cen{
+	align-items: center;
+	justify-content: center;
+}
 .ease-quick {
 	transition: all 0.3s ease-in-out;
 }
@@ -58,7 +63,9 @@ body {
 .ease-slow {
 	transition: all 0.8s ease-in-out;
 }
-
+.gap {
+	gap: 25px;
+}
 .hidden {
 	display: none;
 	opacity: 0;
@@ -102,6 +109,7 @@ button {
 }
 h4, h5 {
 	margin-bottom: 25px;
+	text-align: center;
 }
 h5 {
 	font-size: 1.2rem;
@@ -255,7 +263,6 @@ article {
 	}
 	a {
 		text-align: center;
-		color: var(--clr-background);
 		font-size: 1.4rem;
 		margin-bottom: 25px;
 		i {
