@@ -10,6 +10,7 @@ import {currentShow} from './DAL/ShowList';
 function App() {
   return (
     <BrowserRouter>
+      {/* <header class="f-col hero-banner" id="page-top"></header> */}
       <FloatingHeader />
       <Routes>
         <Route path='/' element={<SplashPage/>} />
