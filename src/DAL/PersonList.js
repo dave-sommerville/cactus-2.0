@@ -83,6 +83,7 @@ CAST
 
 const JordanPhilips = new Person(
   "Jordan Philips",
+  "",
   "While they met some years previous, Jordan first got to work with Dan on The Beggar and the Wolf with Merlyn Productions in 2019. The last show they worked on together was a radio production of Letters: War Within with Parachuting Camel Productions which Jordan directed for release in 2024, making it Dan's final, posthumous performance. It is an honour to help bring Cactus to the stage in Dan's memory.",
   jordanPhilips
 );
@@ -197,7 +198,8 @@ export const cactusCrewList = [
   HeatherForgie, 
   BernardBorland, 
   DavePruden,
-  RickSherger
+  RickSherger,
+  DaveSommerville
 ];
 
 export const unresolvedCastList = [

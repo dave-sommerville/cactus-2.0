@@ -2,6 +2,7 @@
 // Show One
 import Show from '../DAL/ShowModel';
 import { cactusCastList, cactusCrewList, sssjgCastList, sssjgCrewList, unresolvedCastList, unresolvedCrewList } from '../DAL/PersonList';
+import cactusPoster from '../media/graphics/cactus-round-graphic.png';
 import cactusAllStaff from '../media/graphics/cast.jpg';
 import sssjgPoster from '../media/graphics/poster.jpg';
 import sssjgAllStaff from '../media/graphics/cast-photo.jpg';
@@ -12,7 +13,7 @@ import unresolvedAllStaff from '../media/graphics/Unresolved Cast and Crew.jpg';
 const Cactus = new Show(
   "Cactus",
   "Daniel Gilmour",
-  null,
+  cactusPoster,
   cactusAllStaff,
   "When they're out of minions but a mortal needs to face their past before they die, sometimes the god of death must step in. It's just Tom's luck to both find out he's dying and to be escorted through his regrets by a surly deity who's out of practice. At least his best friend Jackie (and her trusty cactus, Angie) are coming along as emotional support. Written by Daniel Gilmour, who left the world's stage too soon. Cactus is a dark comedy about life, death, love and loss that we now perform in his memory.",
   ["Venue 6", "Tom Hendry Warehouse", "140 Rupert Ave"],
