@@ -15,7 +15,7 @@ const Cactus = new Show(
   null,
   cactusAllStaff,
   "When they're out of minions but a mortal needs to face their past before they die, sometimes the god of death must step in. It's just Tom's luck to both find out he's dying and to be escorted through his regrets by a surly deity who's out of practice. At least his best friend Jackie (and her trusty cactus, Angie) are coming along as emotional support. Written by Daniel Gilmour, who left the world's stage too soon. Cactus is a dark comedy about life, death, love and loss that we now perform in his memory.",
-  ["Venue 6 - Tom Hendry Warehouse"],
+  ["Venue 6", "Tom Hendry Warehouse", "140 Rupert Ave"],
   [
     "Thursday, July 17 - 2:15 PM",
     "Saturday, July 19 - 11:00 AM",
@@ -40,7 +40,7 @@ export const Unresolved = new Show (
   unresolvedPoster,
   unresolvedAllStaff,
   "No parent should outlive their child, but . . . what if you do? How do you cope? How do you grieve? How do you go on living? What if you can’t? What if someone’s to blame? What if that someone is . . . you? Jack and Melissa have lost their daughter, Jadyn, and their unspoken grief festers between them in a vicious cycle of shame and guilt, unassuaged by well-intentioned relatives and clergy. Don’t miss this haunting, bold new piece from local playwright Allan Turner.",
-  ["Coming Soon"],
+  ["Venue 23 One88", "188 Princess Street"],
   ["Coming Soon"],
   "",
   "",
