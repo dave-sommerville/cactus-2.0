@@ -42,7 +42,17 @@ export const Unresolved = new Show (
   unresolvedAllStaff,
   "No parent should outlive their child, but . . . what if you do? How do you cope? How do you grieve? How do you go on living? What if you can’t? What if someone’s to blame? What if that someone is . . . you? Jack and Melissa have lost their daughter, Jadyn, and their unspoken grief festers between them in a vicious cycle of shame and guilt, unassuaged by well-intentioned relatives and clergy. Don’t miss this haunting, bold new piece from local playwright Allan Turner.",
   ["Venue 23 One88", "188 Princess Street"],
-  ["Coming Soon"],
+  [
+    "Thursday, July 16 - 8:15 PM", 
+    "Friday, July 17 - 5:00 PM", 
+    "Saturday, July 18 - 6:15 PM",
+    "Sunday, July 19 - 1:45 PM",
+    "Tuesday, July 21 - 5:00 PM",
+    "Wednesday, July 22 - 6:00 PM",
+    "Thursday, July 23 - 5:00 PM",
+    "Friday, July 24 - 4:30 PM",
+    "Saturday, July 25 - 8:15 PM"
+  ],
   "",
   "",
   "",

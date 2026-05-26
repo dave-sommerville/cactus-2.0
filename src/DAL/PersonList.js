@@ -66,7 +66,7 @@ const KaterinaDawson = new Person(
 );
 const KeaneBaker = new Person(
   "Keane Baker",
-  "Assistant Stage Director",
+  "Assistant Stage Manager",
   "Keane Baker has been a dedicated member of the crew for his high school’s musical for 3 years to help produce shows such as “Beauty and the Beast” and “Mamma Mia.” He is excited to work with Cactus Theatre co. to help bring “Unresolved” to the Fringe stage. Keane is known to get up early on a Saturday morning to bake cookies for his cast but not his family.",
   keaneBaker
 );
