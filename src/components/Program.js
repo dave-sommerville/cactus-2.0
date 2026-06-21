@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import PersonProfile from '../components/PersonProfile';
 
 const Program = ({ showModel, id}) => {
@@ -55,7 +56,14 @@ const Program = ({ showModel, id}) => {
 
           <div className="poster">
             {currentShow && currentShow.coverPhoto ? (
-              <img src={currentShow.coverPhoto} alt={`Show Poster for ${currentShow.title}`} />
+              <img
+                src={currentShow.coverPhoto}
+                alt={`Show Poster for ${currentShow.title}`}
+                loading="lazy"
+                decoding="async"
+                className="cover-photo"
+                style={{ maxWidth: '100%', height: 'auto' }}
+              />
             ) : null}
           </div>
 
@@ -115,16 +123,25 @@ const Program = ({ showModel, id}) => {
               </a>  
               }
               {currentShow.galleryLink && currentShow.galleryLink !== '' &&
-              <a href={currentShow.galleryLink} target="_blank" rel="noreferrer" className="btn coming-soon">
-                Photo Gallery
-              </a>  
+              (currentShow.galleryLink.startsWith('/') ? (
+                <Link to={currentShow.galleryLink} className="btn coming-soon">
+                  Rehearsal Gallery
+                </Link>
+              ) : (
+                <a href={currentShow.galleryLink} target="_blank" rel="noreferrer" className="btn coming-soon">
+                  Photo Gallery
+                </a>
+              ))
               }
             </div>
               <figure className="flex cen">
                 <img 
                   className="cast-photo" 
                   src={currentShow.allStaffPhoto}
-                  alt="Cast and Crew" 
+                  alt="Cast and Crew"
+                  loading="lazy"
+                  decoding="async"
+                  width="300"
                 />
               </figure>
 

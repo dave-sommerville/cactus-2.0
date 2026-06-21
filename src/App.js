@@ -5,6 +5,7 @@ import Memories from './pages/Memories';
 import PastShows from './pages/PastShows';
 import Contact from './pages/Contact';
 import About from './pages/About';
+import RehearsalGallery from './pages/RehearsalGallery';
 import {currentShow} from './DAL/ShowList';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/memories' element={<Memories />} />
+        <Route path='/rehearsal-gallery' element={<RehearsalGallery />} />
         <Route path='/past-shows' element={<PastShows/>} />
       </Routes>
     </BrowserRouter>

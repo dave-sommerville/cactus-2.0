@@ -56,7 +56,7 @@ export const Unresolved = new Show (
   "",
   "",
   "",
-  "",
+  "/rehearsal-gallery",
   unresolvedCastList,
   unresolvedCrewList
 );

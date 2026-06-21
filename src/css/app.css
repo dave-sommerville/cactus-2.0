@@ -266,7 +266,7 @@ article {
 		width: 560px;
 
 	}
-	a {
+	a > :not(.btn) {
 		text-align: center;
 		font-size: 1.4rem;
 		margin-bottom: 25px;
