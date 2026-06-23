@@ -53,7 +53,7 @@ export const Unresolved = new Show (
     "Friday, July 24 - 4:30 PM",
     "Saturday, July 25 - 8:15 PM"
   ],
-  "",
+  "https://www.winnipegfringe.com/Buy-Tickets/Show-Filter.aspx",
   "",
   "",
   "/rehearsal-gallery",
