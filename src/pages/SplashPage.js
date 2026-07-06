@@ -23,10 +23,12 @@ const SplashPage = () => {
         showModel={Unresolved}
         id="unresolved"
       />
-      <Program
-        showModel={sssjgGimli}
-        id="sssjgGimli"
-      />
+      <div className="w-500px t-cen">
+      <p>This play deals with the topic of suicide. If you or someone you know are in need of support please reach out.</p>
+      <a href="https://988.ca/" target="_blank" rel="noreferrer">Suicide Crisis Hotline</a> 
+      <p>Call or Text - 988</p>
+      </div>
+      
       </div>
   );
 };
