@@ -41,7 +41,7 @@ const AllanTurner = new Person(
 const KrissadieArmstrong = new Person(
   "Krissadie Armstrong",
   "",
-  "Krissadie Armstrong (she/her) is an emerging artist based in Winnipeg, Manitoba. She has recently had the pleasure of taking part in workshops of new work, including the first workshop of A Manitoba Christmas Carol with Rainbow Stage and Love, Louis through RMTC’s Pimootayowin: A Festival of New Work. In the past, Krissadie has been involved with several educational theatre programs, including MYTP’s Musical Theatre Company and Summer Studio, StudioWorks Academy, and Junior Musical Theatre Company. She has also danced at Shelley Shearer School of Dance and Brady Academy of Irish Dance for the past 13 years. Krissadie is currently pursuing her Bachelor of Arts at the University of Manitoba, where she is a member of the musical theatre ensemble.",
+  "Krissadie Armstrong (she/her) is an emerging artist based in Winnipeg, Manitoba. She has recently had the pleasure of taking part in workshops of new work, including the first workshop of A Manitoba Christmas Carol with Rainbow Stage and Love, Louis through RMTC’s Pimootayowin: A Festival of New Work. In the past, Krissadie has been involved with several educational theatre programs, including MTYP’s Musical Theatre Company and Summer Studio, StudioWorks Academy, and Junior Musical Theatre Company. She has also danced at Shelley Shearer School of Dance and Brady Academy of Irish Dance for the past 13 years. Krissadie is currently pursuing her Bachelor of Arts at the University of Manitoba, where she is a member of the musical theatre ensemble.",
   krissadieArmstrong
 );
 
