@@ -37,7 +37,7 @@ const SplashPage = () => {
           Dustin Jackson (lights), Kathleen Armstrong, Kolleen Karlowsky-Clark and Chris Bishopp (costumes), Lloyd Cohen, Heather Forgie, Kevin Birkholz, Daniel Suderman and Dan Blanchette (sets)
         </p>
       </div>
-      <img src={otherShows} className="w-500px"/>
+      <img src={otherShows} className="other-shows"/>
     </div>
   );
 };

@@ -242,6 +242,10 @@ nav {
 article {
 	scroll-margin-top: 100px;
 }
+.other-shows {
+	width: 500px;
+}
+
 .bio-content {
 	max-height: 1000px;
 	opacity: 1;
@@ -722,6 +726,9 @@ main {
 	}
 	.program-wrapper {
 		flex-direction: column;
+	}
+	.other-shows {
+		width: 90svw;
 	}
 	nav h3 {
 		font-size: 1.2rem;
