@@ -54,7 +54,7 @@ const Program = ({ showModel, id}) => {
         <h2>{currentShow.title}</h2>
         <h4>by {currentShow.author}</h4>
 
-          <div className="poster">
+          <div className="poster border-rad">
             {currentShow && currentShow.coverPhoto ? (
               <img
                 src={currentShow.coverPhoto}
@@ -108,30 +108,19 @@ const Program = ({ showModel, id}) => {
 
             <div className="bio-wrapper f-col">
               {currentShow.ticketLink && currentShow.ticketLink !== '' &&
-              <a href={currentShow.ticketLink} target="_blank" rel="noreferrer" className="btn coming-soon">
+              <a href={currentShow.ticketLink} target="_blank" rel="noreferrer" className="btn coming-soon mb-10px">
                 Purchase Tickets
               </a>  
               }
               {currentShow.mediaKitLink && currentShow.mediaKitLink !== '' &&
-              <a href={currentShow.mediaKitLink} target="_blank" rel="noreferrer" className="btn coming-soon">
+              <a href={currentShow.mediaKitLink} target="_blank" rel="noreferrer" className="btn coming-soon mb-10px">
                 Media Kit
               </a>  
               }
               {currentShow.reviewsLink && currentShow.reviewsLink !== '' &&
-              <a href={currentShow.reviewsLink} target="_blank" rel="noreferrer" className="btn coming-soon">
+              <a href={currentShow.reviewsLink} target="_blank" rel="noreferrer" className="btn coming-soon mb-10px">
                 Reviews
               </a>  
-              }
-              {currentShow.galleryLink && currentShow.galleryLink !== '' &&
-              (currentShow.galleryLink.startsWith('/') ? (
-                <Link to={currentShow.galleryLink} className="btn coming-soon">
-                  Rehearsal Gallery
-                </Link>
-              ) : (
-                <a href={currentShow.galleryLink} target="_blank" rel="noreferrer" className="btn coming-soon">
-                  Photo Gallery
-                </a>
-              ))
               }
             </div>
               <figure className="flex cen">
@@ -142,22 +131,33 @@ const Program = ({ showModel, id}) => {
                   loading="lazy"
                   decoding="async"
                   width="300"
-                />
+                  />
               </figure>
 
             <div className="button-wrapper siren">
               <button 
                 className={`cast-btn ${isCastOpen ? 'active' : ''}`} 
                 onClick={(event) => { event.stopPropagation(); openCast(); }}
-              >
+                >
                 Cast
               </button>
               <button 
                 className={`crew-btn ${isCrewOpen ? 'active' : ''}`} 
                 onClick={(event) => { event.stopPropagation(); openCrew(); }}
-              >
+                >
                 Crew
               </button>
+              {currentShow.galleryLink && currentShow.galleryLink !== '' &&
+              (currentShow.galleryLink.startsWith('/') ? (
+                <Link to={currentShow.galleryLink} className="btn coming-soon">
+                  Rehearsal Gallery
+                </Link>
+              ) : (
+                <a href={currentShow.galleryLink} target="_blank" rel="noreferrer" className="btn coming-soon">
+                  Photo Gallery
+                </a>
+              ))
+            }
             </div>
 
             {/* Unified Cast Section */}

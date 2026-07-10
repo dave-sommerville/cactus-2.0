@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Program from '../components/Program';
 import { Unresolved, sssjgGimli } from '../DAL/ShowList';
+import otherShows from '../media/graphics/other-shows.jpeg';
 import '../css/app.css';
 
 const SplashPage = () => {
@@ -23,13 +24,21 @@ const SplashPage = () => {
         showModel={Unresolved}
         id="unresolved"
       />
-      <div className="w-500px t-cen">
-      <p>This play deals with the topic of suicide. If you or someone you know are in need of support please reach out.</p>
-      <a href="https://988.ca/" target="_blank" rel="noreferrer">Suicide Crisis Hotline</a> 
-      <p>Call or Text - 988</p>
+      <div className="w-500px t-cen mb-25px">
+        <p>This play deals with the topic of suicide. If you or someone you know are in need of support please reach out.</p>
+        <a href="https://988.ca/" target="_blank" rel="noreferrer">Suicide Crisis Hotline</a> 
+        <p>988 - Call or Text</p>
       </div>
-      
+      <div className="w-500px t-cen mb-25px">
+        <p>
+          A heartfelt thank you to the following people for their contributions to this production:
+        </p>
+        <p> 
+          Dustin Jackson (lights), Kathleen Armstrong, Kolleen Karlowsky-Clark and Chris Bishopp (costumes), Lloyd Cohen, Heather Forgie, Kevin Birkholz, Daniel Suderman and Dan Blanchette (sets)
+        </p>
       </div>
+      <img src={otherShows} className="w-500px"/>
+    </div>
   );
 };
 

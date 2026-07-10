@@ -6,7 +6,7 @@ import cactusPoster from '../media/graphics/cactus-round-graphic.png';
 import cactusAllStaff from '../media/graphics/cast.jpg';
 import sssjgPoster from '../media/graphics/poster.jpg';
 import sssjgAllStaff from '../media/graphics/cast-photo.jpg';
-import unresolvedPoster from '../media/graphics/Unresolved Graphic.jpg';
+import unresolvedPoster from '../media/graphics/unresolved-updated.jpg';
 import sssjgPosterGimli from '../media/graphics/NewGraphicSSSJG.jpg';
 import unresolvedAllStaff from '../media/graphics/Unresolved Cast and Crew.jpg';
 
@@ -54,7 +54,7 @@ export const Unresolved = new Show (
     "Saturday, July 25 - 8:15 PM"
   ],
   "https://www.winnipegfringe.com/performer-detail.aspx?kw=Cactus+Theatre+Co",
-  "",
+  "/media/unresolved-media-kit.pdf",
   "",
   "/rehearsal-gallery",
   unresolvedCastList,

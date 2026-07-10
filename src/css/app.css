@@ -80,7 +80,9 @@ body {
 .circle {
 	border-radius: 50%;
 }
-
+.border-rad {
+	border-radius: var(--app-bdr-rad);
+}
 .pointer {
 	cursor: pointer;
 }
@@ -111,6 +113,12 @@ body {
 }
 .t-cen {
 	text-align: center;
+}
+.mb-25px {
+	margin-bottom: 25px;
+}
+.mb-10px {
+	margin-bottom: 10px;
 }
 button {
 	border: none;
@@ -175,7 +183,6 @@ button, .btn {
 .btn {
 	line-height: 50px;
 	width: fit-content;
-	margin: 10px 0;
 }
 button:hover, .btn:hover{
 	filter: brightness(0.7);
